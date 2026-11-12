@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RED CLAN | Beyond Imagination</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse at center, #5e0000 0%, #190000 40%, #050505 80%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      transparent,
+      rgba(0,0,0,.5)
+    );
+}
+
+.particles {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(#ff2727 1px, transparent 1px);
+    background-size: 45px 45px;
+    opacity: .25;
+    animation: move 15s linear infinite;
+}
+
+@keyframes move {
+    from { transform: translateY(0); }
+    to { transform: translateY(-200px); }
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.tag {
+    color: #ff3939;
+    letter-spacing: 8px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(55px, 12vw, 130px);
+    font-weight: 1000;
+    letter-spacing: -5px;
+    color: #fff;
+    text-shadow:
+      0 3px #a90000,
+      0 7px #740000,
+      0 12px 25px #ff0000,
+      0 0 60px #ff0000;
+    transform: perspective(500px) rotateX(8deg);
+}
+
+h1 span {
+    color: #ff1717;
+}
+
+.subtitle {
+    margin-top: 25px;
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: #ddd;
+}
+
+.buttons {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 16px 35px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #ff2929;
+    letter-spacing: 2px;
+    font-size: 12px;
+    transition: .4s;
+}
+
+.btn.primary {
+    background: #c90000;
+    box-shadow: 0 0 25px #ff0000;
+}
+
+.btn:hover {
+    background: white;
+    color: #a00000;
+    box-shadow: 0 0 35px red;
+    transform: translateY(-5px);
+}
+
+.orb {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ff2525, #8b0000 40%, transparent 70%);
+    filter: blur(30px);
+    opacity: .3;
+    animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+    from { transform: scale(.8); opacity: .2; }
+    to { transform: scale(1.3); opacity: .5; }
+}
+
+.section {
+    padding: 100px 20px;
+    text-align: center;
+    background: #080808;
+}
+
+.section h2 {
+    color: #ff2929;
+    font-size: 35px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    max-width: 600px;
+    margin: auto;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.card {
+    width: 250px;
+    padding: 40px 20px;
+    background: linear-gradient(145deg, #250000, #090909);
+    border: 1px solid #570000;
+    transition: .4s;
+}
+
+.card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 0 30px #8b0000;
+}
+
+.card h3 {
+    color: #ff3030;
+    margin-bottom: 15px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+    background: black;
+    letter-spacing: 3px;
+    font-size: 11px;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="particles"></div>
+    <div class="orb"></div>
+
+    <div class="content">
+        <div class="tag">WELCOME TO THE DARK SIDE</div>
+
+        <h1>RED <span>CLAN</span></h1>
+
+        <div class="subtitle">
+            POWER • UNITY • LEGACY
+        </div>
+
+        <div class="buttons">
+            <a href="#about" class="btn primary">ENTER THE WORLD</a>
+            <a href="#members" class="btn">EXPLORE</a>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <h2>THE LEGACY</h2>
+    <p>
+        A world beyond imagination.
+        A powerful vision built on creativity,
+        technology and limitless possibilities.
+        Welcome to the RED CLAN universe.
+    </p>
+</section>
+
+<section class="section" id="members">
+    <h2>OUR UNIVERSE</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>THE POWER</h3>
+            <p>Unleash your imagination.</p>
+        </div>
+
+        <div class="card">
+            <h3>THE CLAN</h3>
+            <p>One vision. One legacy.</p>
+        </div>
+
+        <div class="card">
+            <h3>THE FUTURE</h3>
+            <p>Beyond every limit.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    RED CLAN © 2026 | BEYOND IMAGINATION
+</footer>
+
+</body>
+</html>
